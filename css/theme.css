@@ -1,0 +1,58 @@
+/* theme.css - CSS Variables Engine */
+
+:root {
+  /* =========================================
+     MODE MALAM (DEFAULT) - CYBERPUNK NEON
+     ========================================= */
+  --bg-main: #030508;
+  --panel-bg: rgba(6, 9, 16, 0.85);
+  
+  /* Teks */
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #475569;
+
+  /* Warna Aksen (Neon Terang) */
+  --color-cyan: #00f2fe;
+  --color-cyan-dim: rgba(0, 242, 254, 0.15);
+  
+  --color-magenta: #ff00ff;
+  --color-magenta-dim: rgba(255, 0, 255, 0.15);
+  
+  --color-emerald: #10b981;
+  --color-amber: #f59e0b;
+  
+  /* Pengaturan Glow & Garis Tajam */
+  --border-width: 1px;
+  --glow-intensity: 8px;
+  --box-shadow-cyan: 0 0 var(--glow-intensity) var(--color-cyan-dim), inset 0 0 var(--glow-intensity) var(--color-cyan-dim);
+  --box-shadow-magenta: 0 0 var(--glow-intensity) var(--color-magenta-dim), inset 0 0 var(--glow-intensity) var(--color-magenta-dim);
+}
+
+[data-theme="light"] {
+  /* =========================================
+     MODE SIANG - SOLID TACTICAL LIGHT
+     ========================================= */
+  --bg-main: #f1f5f9;
+  --panel-bg: rgba(255, 255, 255, 0.95);
+  
+  /* Teks */
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #94a3b8;
+
+  /* Warna Aksen (Solid, Tidak Silau) */
+  --color-cyan: #0284c7; 
+  --color-cyan-dim: rgba(2, 132, 199, 0.05);
+  
+  --color-magenta: #c026d3;
+  --color-magenta-dim: rgba(192, 38, 211, 0.05);
+  
+  --color-emerald: #059669;
+  --color-amber: #b45309;
+  
+  /* Pengaturan Glow (Dimatikan untuk siang) */
+  --glow-intensity: 0px; 
+  --box-shadow-cyan: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* Ganti neon dengan drop-shadow elegan */
+  --box-shadow-magenta: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
