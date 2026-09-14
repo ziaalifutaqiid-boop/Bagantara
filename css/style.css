@@ -1,0 +1,83 @@
+/* style.css - Cyberpunk Wireframe Styling */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+.font-tech {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* 
+  Panel Wireframe Utama 
+  (Sesuai gambar: Garis tipis 1px, latar transparan, glow tipis)
+*/
+.wireframe-panel {
+  background-color: var(--panel-bg);
+  border: var(--border-width) solid var(--color-cyan);
+  box-shadow: var(--box-shadow-cyan);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.wireframe-panel-magenta {
+  border-color: var(--color-magenta);
+  box-shadow: var(--box-shadow-magenta);
+}
+
+/* Input Form ala Terminal */
+.terminal-input {
+  background-color: transparent;
+  border: var(--border-width) solid var(--text-muted);
+  color: var(--text-primary);
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.terminal-input:focus {
+  border-color: var(--color-cyan);
+  box-shadow: var(--box-shadow-cyan);
+}
+
+/* 
+  Single Page Application (SPA) Panel Transitions
+*/
+.spa-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.spa-panel.active {
+  position: relative;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+/* Background Cyber Grid Transparan */
+.cyber-grid-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: 
+    linear-gradient(to right, var(--text-muted) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--text-muted) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.05;
+  pointer-events: none;
+}
